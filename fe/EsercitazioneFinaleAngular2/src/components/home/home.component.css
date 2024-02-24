@@ -1,0 +1,83 @@
+.underHeader {
+    width: 100%;
+    padding-bottom: 5rem;
+    background-color:  #03004f;
+}
+
+.visiblePage {
+    background-color: #03004f;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.logo {
+    width: 50%;
+    padding-top: 20rem;
+    padding-left: 5rem;
+    font-size: 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    font-family: 'Quicksand-SemiBold';
+}
+
+
+.logoUp {
+    height: fit-content;
+    color: rgb(78 115 244);
+}
+
+.logoDown {
+    height: fit-content;
+    color: white;
+
+}
+
+
+.form {
+    width: 50%;
+    padding-top: 17rem;
+    padding-right: 4rem;
+}
+
+.secondClass {
+    width: 100%;
+    padding-top: 3rem;
+    padding-left: 13rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.2rem;
+}
+
+button {
+    font-family: 'Quicksand-SemiBold';
+    padding: 1rem;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    width: 70%;
+}
+
+
+
+.start:hover{
+    background-color: white;
+    color: #03004f;
+}
+
+.end:hover {
+    background-color: red;
+}
+
+
+.modal {
+    z-index: 3;
+}
+

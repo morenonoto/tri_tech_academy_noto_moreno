@@ -1,0 +1,103 @@
+header {
+    background-color: white;
+    margin-top: 0;
+    height: 4rem;
+}
+
+div {
+    margin: auto;
+    width: fit-content;
+}
+
+
+.hbg {
+    background-color: #03004e;
+    padding: 0.5rem;
+}
+
+
+.navbar-toggler {
+    background-color: white;
+}
+
+
+.navbar-nav {
+    display: flex;
+    font-size: 1.5rem;
+    font-family: 'Quicksand-SemiBold';
+    width: 16%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.container-fluid {
+    margin-left: 1rem;
+    width: 100%;
+   
+}
+
+.section {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 0.25em;
+    width: 6.5rem;
+    text-align: center;
+}
+
+.navbar-expand-lg {
+    padding: 0;
+}
+
+
+.section:hover {
+    background-color: #c5d2ff;
+}
+
+
+img {
+    transition: all .7s;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.logo:hover {
+    transform:scale(1.1) rotate(-10deg);
+}
+
+.logo {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+#navbarNavAltMarkup {
+    justify-content: space-between;
+}
+
+
+
+.margin-right {
+    margin: 0;
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 1rem;
+    padding: 1rem;
+    border-radius: 0.25em;
+}
+
+
+.margin-right:hover {
+    background-color: #c5d2ff;
+}
+
+
+
+mat-spinner {
+    width: 10px;
+    position: absolute;
+    top: 50%;
+    left: 92%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+

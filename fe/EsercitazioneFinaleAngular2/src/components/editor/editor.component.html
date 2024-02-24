@@ -1,0 +1,98 @@
+<div class="container">
+
+    <form [formGroup]="booking">
+
+
+
+        <div class="component">
+
+            <label for="title">Title:</label><br>
+            <input type="text" formControlName="title"><br><br>
+
+
+
+
+
+            <label>Site:</label><br>
+            <select (change)="siteSelection($event)" formControlName="site">
+                <option *ngFor="let site of sites" [value]="site.id">{{site.name}}</option>
+            </select><br><br>
+            
+
+
+            <div *ngIf="booking.value.site">
+                <label>Room: </label><br>
+                <select formControlName="room" (change)="roomSelection($event)">
+                    <option *ngFor="let room of rooms" [value]="room.id">{{room.name}}</option><br><br>
+                </select>
+            </div><br><br>
+
+
+
+
+            <div class="date">
+                <div class="field">
+                    <label>Start:</label><br>
+                    <input type="datetime-local" [(ngModel)]="startValue" formControlName="startDate" (input)="onChangeDate()"><br><br>
+                </div>
+
+                <div class="field">
+                    <label>End:</label><br>
+                    <input type="datetime-local" [(ngModel)]="endValue" formControlName="endDate" (input)="onChangeDate()"><br><br>
+
+                </div>
+            </div>
+
+            
+            <div class="error" *ngIf="occupied && !this.firstTime">
+                <span>La sala risulta occupata, scegli un altro range di ore</span>
+            </div>
+
+            <div class="error" *ngIf="impossible && !this.firstTime">
+                <span>Questo range di date non è valido.</span>
+            </div>
+
+            <label for="lname">Partecipanti:</label><br>
+            <input type="number" value="" formControlName="numberOfParticipants"><br><br>
+
+            <label>Tech necessities:</label><br>
+            <textarea name="" id="" cols="19" rows="5" formControlName="techNecessities"></textarea><br><br>
+
+
+
+
+
+            <button type="button" [disabled]="!booking.valid || occupied || impossible " (click)="creaPrenotazione()">Invia</button>
+        </div>
+    </form>
+
+
+
+
+    <div *ngIf="positiveResponse" class="modal s" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>Prenotazione aggiornata con successo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="confirm()"
+                        routerLink="/agenda" id="close">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div *ngIf="negativeResponse" class="alert alert-danger" role="alert" (click)="close()">
+        <fa-icon [icon]="faxmark" (click)="close()"></fa-icon>
+        <p>Non è stato possibile effettuare l'update!</p>
+    </div>
+
+
+    <div *ngIf="positiveResponse || negativeResponse || loading" class="blanket"></div>
+
+    <mat-spinner *ngIf="loading"></mat-spinner>
+    
+
+</div>

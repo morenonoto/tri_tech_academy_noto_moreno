@@ -1,0 +1,19 @@
+<div class="container">
+
+
+    <div *ngFor="let booking of bookings, index as i">
+        <div *ngIf="formattedBookings[i] === agendaDate.format('DD MM YYYY')" class="event" routerLink="bookingDetail" (click)="showThisBooking(booking.id)">
+
+            <div>
+                {{booking.title}}
+            </div>
+            <div>
+                <p>{{startHours[i]}} - {{endHours[i]}} </p>
+            </div>
+        </div>
+
+
+
+
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<h1>Le nostre sedi</h1>
+
+
+<div class="container">
+    <mat-card class="card" *ngFor="let site of sites, index as i" (click)="showRooms(site.id)" routerLink="/room" id="firstCard">
+        <mat-card-header>
+          <mat-card-title>{{site.name}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{site.address}}</p>
+        </mat-card-content>
+      </mat-card>
+</div>

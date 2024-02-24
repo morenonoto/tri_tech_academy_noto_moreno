@@ -1,0 +1,90 @@
+<div class="container">
+
+    <div class="card" *ngIf="booking">
+        <div class="closer">
+            <fa-icon [icon]="faCircleXmark" (click)="closeDetail()"></fa-icon>
+        </div>
+        <header>
+            {{booking.title}}
+        </header>
+
+
+        <div class="body">
+
+            <div class="from">
+                <p>from:</p>
+                <p>{{beginningDate}}</p>
+            </div>
+
+            <div class="to">
+                <p>to: </p>
+                <p>{{endDate}}</p>
+            </div>
+
+
+            <div class="participants">
+                <p> participants number: {{booking.numberOfParticipants}}</p>
+            </div>
+
+
+            <div class="techNecessities">
+                <p> Tech necessities: <br>
+                    {{booking.techNecessities}}</p>
+            </div>
+
+
+            <div class="reservedBy">
+                <p>reserved by: {{booking.user.name}}</p>
+            </div>
+
+
+        </div>
+
+
+
+        <div class="commands" *ngIf="isAuthorized">
+            <div id="command">
+                <fa-icon [icon]="faPenToSquare" (click)="bookingUpdate()" routerLink="editor"></fa-icon>
+            </div>
+            <div id="command">
+                <fa-icon [icon]="faTrashCan" (click)="bookingDelete()" id="command"></fa-icon>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div *ngIf="deleted || deleting" class="blanket"></div>
+
+
+
+    <div *ngIf="deleted" class="modal " tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>Eliminazione avvenuta con successo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        (click)="close()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="deleting" class="modal " tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>Vuoi davvero eliminare questo elemento?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        (click)="cancel()">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        (click)="confirmDelete(booking.id)" id="delete">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

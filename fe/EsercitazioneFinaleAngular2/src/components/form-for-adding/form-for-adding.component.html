@@ -1,0 +1,76 @@
+<div class="container">
+
+    <form [formGroup]="booking">
+
+
+
+        <div class="component">
+
+            <label for="title">Title:</label><br>
+            <input type="text" formControlName="title"><br><br>
+
+
+
+
+
+            <div class="date">
+                <div class="field">
+                    <label>Start:</label><br>
+                    <input type="time" [(ngModel)]="startValue" formControlName="startDate" (click)="startDate()" (input)="onChangeDate()" ><br><br>
+                </div>
+
+                <div class="field">
+                    <label>End:</label><br>
+                    <input type="time" [(ngModel)]="endValue" formControlName="endDate" (input)="onChangeDate()"><br><br>
+
+                </div>
+            </div>
+
+
+            <div class="error" *ngIf="occupied && !this.firstTime">
+                <span>La sala risulta occupata, scegli un altro range di ore</span>
+            </div>
+
+            <div class="error" *ngIf="impossible && !this.firstTime">
+                <span>Questo range di date non è valido.</span>
+            </div>
+
+            <label for="lname">Partecipanti:</label><br>
+            <input type="number" value="" formControlName="numberOfParticipants"><br><br>
+
+            <label>Tech necessities:</label><br>
+            <textarea name="" id="" cols="19" rows="5" formControlName="techNecessities"></textarea><br><br>
+
+            <button type="button" [disabled]="!booking.valid || occupied || impossible " (click)="creaPrenotazione()">Invia</button>
+        </div>
+    </form>
+
+
+
+    <div *ngIf="added" class="modal " tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>Prenotazione aggiunta con successo.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="close()"
+                        id="close">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div *ngIf="notAdded" class="alert alert-danger" role="alert" (click)="negativeClose()">
+        <fa-icon [icon]="faxmark" (click)="negativeClose()"></fa-icon>
+        <p>Non è stato possibile inserire la prenotazione</p>
+    </div>
+
+
+    <div *ngIf="added || notAdded || loading" class="blanket"></div>
+
+    <mat-spinner *ngIf="loading"></mat-spinner>
+
+
+</div>

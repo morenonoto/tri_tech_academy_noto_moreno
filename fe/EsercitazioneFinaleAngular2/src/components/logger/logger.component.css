@@ -1,0 +1,62 @@
+body {
+    background-color: #03004f;
+}
+
+form {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    font-size: 1.2rem;
+    font-family: 'Quicksand-SemiBold';
+    color: white;
+}
+
+input, button, label {
+    width: 120%;
+}
+
+input {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+label {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+button {
+    padding: 1rem;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+
+
+button:hover {
+    background-color: white;
+    color: #03004f;
+}
+
+
+.alert {
+    display: flex;
+    font-family: 'Quicksand-SemiBold';
+    GAP: 0.5REM;
+    width: 22rem;
+    position: absolute;
+    TRANSFORM: translate(-50%, -50%);
+    top: 25%;
+    left: 74.5%;
+
+}
+
+
+.alert p {
+    margin-bottom: 0;
+}

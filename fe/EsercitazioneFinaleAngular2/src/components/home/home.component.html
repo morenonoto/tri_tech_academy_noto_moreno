@@ -1,0 +1,27 @@
+<div class="underHeader"></div>
+
+<div class="visiblePage">
+    <div class="logo">
+        <div class="logoUp">
+            <p>
+                booking
+            </p>
+        </div>
+        <div class="logoDown">
+            <p>
+                manager
+            </p>
+        </div>
+    </div>
+
+    <div class="form">
+        <app-logger *ngIf="!getMain"></app-logger>
+
+        <div *ngIf="getMain" class="secondClass">
+            <button type="button" routerLink="/sites" class="start">Get started</button>
+            <button type="button" class="end" (click)="exit()">Exit</button>
+        </div>
+    </div>
+</div>
+
+

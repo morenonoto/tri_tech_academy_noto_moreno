@@ -1,0 +1,69 @@
+
+
+.container {
+    display: flex;
+    gap: 2rem;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    font-family: 'Quicksand-SemiBold';
+}
+
+
+.card {
+    width: 20rem;
+    padding: 3rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 7px 29px 0px;
+    border-radius: 13px;
+}
+
+
+
+h1 {
+    padding-top: 11rem;
+    font-size: 5rem;
+    text-align: center;
+    font-family: 'Quicksand-SemiBold';
+    color: #03004e;
+}
+
+
+.mat-mdc-card-content:last-child {
+    height: 3rem;
+    padding-bottom: 16px;
+    color: #03004e;
+}
+
+.mat-mdc-card-title {
+    font-size: 2rem;
+    font-family: 'Quicksand-SemiBold';
+}
+
+
+.mat-mdc-card {
+    color: #03004e;
+}
+
+
+.mat-mdc-card p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.mat-mdc-card-header {
+    padding-top: 0;
+}
+
+
+.card {
+    transition: opacity 0.3s; 
+}
+
+.card:hover {
+    opacity: 0.5; 
+}
+
+.card:not(:hover) {
+    opacity: 1;
+}

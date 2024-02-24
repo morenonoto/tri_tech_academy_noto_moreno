@@ -1,0 +1,11 @@
+<div class="container">
+
+    <h1 *ngIf="rooms.length > 1">Le sale conferenze</h1>
+
+    <h2 *ngIf="rooms.length < 0"> Non sono momentaneamente disponibili sale per questa sede!</h2>
+
+    <div *ngFor="let room of rooms" class="row"  (click)="showBookings(room.id)"  routerLink="/agenda">
+        <p>{{room.name}}</p>
+    </div>
+
+</div>

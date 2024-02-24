@@ -1,0 +1,163 @@
+
+
+
+.container {
+    margin-top: 7rem;
+    width: 80%;
+    padding-top: 3rem;
+}
+
+
+form {
+    margin: auto;
+    font-family: 'Quicksand-SemiBold';
+    padding-bottom: 4rem;
+}
+
+
+.component {
+    width: 70%;
+    margin: auto;
+    padding: 3rem;
+    background-color: #03004e;
+    border-radius: 75px;
+}
+
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    padding: 1REM;
+    width: 100%;
+    font-size: 1.5rem;
+    height: 100%;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    border: 1px;
+    color: #03004e;
+
+}
+
+label {
+    font-size: 1.5rem;
+    margin-bottom: -1rem;
+    color: white;
+}
+
+
+.date {
+    display: flex;
+    gap: 6%;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+}
+
+
+
+#title {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 5rem;
+    color: white;
+}
+
+
+
+.error{
+    margin-top: -3rem;
+    color: red;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+
+
+
+.blanket {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.73);
+}
+
+
+.modal {
+    display: block;
+    font-size: 1rem;
+    z-index: 2;
+    font-family: 'Quicksand-SemiBold';
+}
+
+
+.modal-content {
+    margin-top: 10rem;
+}
+
+.modal-content p {
+    margin: 0;
+}
+
+
+
+#close {
+    padding: 0REM;
+    width: 20%;
+    margin-bottom: 0;
+    border-radius: 8px;
+    border: 0px;
+    color: white;
+    background-color: #03004f;
+    font-size: 1.25rem;
+}
+
+
+.alert {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Quicksand-SemiBold';
+    padding: 2rem;
+    align-items: center;
+    position: fixed;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.alert p {
+    margin-bottom: 0;
+}
+
+
+
+mat-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+
+
+input[type="datetime-local"]:in-range::-webkit-datetime-edit-year-field,
+input[type="datetime-local"]:in-range::-webkit-datetime-edit-month-field,
+input[type="datetime-local"]:in-range::-webkit-datetime-edit-day-field,
+input[type="datetime-local"]:in-range::-webkit-datetime-edit-hour-field,
+input[type="datetime-local"]:in-range::-webkit-datetime-edit-minute-field,
+input[type="datetime-local"]:in-range::-webkit-datetime-edit-text {
+    display: none;
+}

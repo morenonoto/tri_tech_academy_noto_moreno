@@ -1,0 +1,23 @@
+<div class="container">
+    <form [formGroup]="userLogIn">
+        <label>Email:</label>
+        <input type="email" formControlName="email">
+
+
+
+        <label>Password:</label>
+        <input type="password" formControlName="password">
+
+
+
+
+        <button type="button" [disabled]="!userLogIn.valid" (click)="access()">Log In</button>
+    </form>
+
+
+
+    <div *ngIf="this.open" class="alert alert-danger" role="alert" (click)="close()">
+        <fa-icon [icon]="faxmark" (click)="close()"></fa-icon>
+        <p>Utente o password non registrati!</p>
+    </div>
+</div>

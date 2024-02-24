@@ -1,0 +1,51 @@
+<div class="container">
+
+    <div class="page">
+        <header>
+
+            <div>
+
+                <div class="field" *ngIf="!choose">
+                    <mat-form-field>
+                        <input matInput [matDatepicker]="picker" #newDate (dateChange)="changeData()"
+                            placeholder="mm/dd/yyyy">
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+
+                <div *ngIf="choose" (click)="chooseData()" class="field">
+                    <p>
+                        <fa-icon [icon]="faCalendarDays" (click)="chooseData()"></fa-icon>
+                        {{currentDate.format("MMM Do YY")}}
+                    </p>
+                </div>
+            </div>
+
+
+
+            <div class="secondPart">
+                <fa-icon [icon]="faAngleLeft" (click)="previousDay()"></fa-icon>
+
+                <fa-icon [icon]="faAngleRight" (click)="nextDay()"></fa-icon>
+            </div>
+
+        </header>
+
+        
+        <div class="body">
+
+            <div class="adding" *ngIf="currentDate > today">
+                <fa-icon [icon]="faFileCirclePlus" (click)="addingPost()" routerLink="/formForAdding"></fa-icon>
+            </div>
+
+            <div class="bookings">
+                <app-bookings [agendaDate]="currentDate"></app-bookings>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+</div>

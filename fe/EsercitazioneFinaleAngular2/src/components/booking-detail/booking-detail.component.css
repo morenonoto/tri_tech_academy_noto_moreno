@@ -1,0 +1,137 @@
+.container {
+    width: 100%;
+    font-size: 2rem;
+    font-family: "Quicksand-SemiBold";
+    padding-top: 6rem;
+}
+
+.card {
+    width: 45%;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 25px;
+    background-color: white;
+    color: #03004e;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.closer {
+    font-size: 2.3rem;
+    text-align: right;
+}
+
+
+.closer:hover{
+    color: red;
+}
+
+
+header {
+    width: 90%;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+
+
+.body {
+    width: 90%;
+    margin: auto;
+    font-size: 1.7rem;
+}
+
+
+.from, .to, .participants, .techNecessities {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+
+
+.participants {
+    margin-top: 4rem;
+}
+
+
+.techNecessities {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    height: auto;
+}
+
+
+.reservedBy {
+    font-size: 1rem;
+    width: 50%;
+    margin: auto;
+}
+
+
+.reservedBy p {
+    text-align: center;
+}
+
+
+.commands {
+    margin: auto;
+    display: flex;
+    width: 90%;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 3rem;
+    font-size: 2.5rem;
+}
+
+
+#command:hover {
+    color: rgb(161 174 220);
+}
+
+
+
+.techNecessities p {
+    line-height: 2.5rem;
+}
+
+
+
+
+.blanket {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.73);
+}
+
+
+.modal {
+    display: block;
+    font-size: 1rem;
+    z-index: 2;
+}
+
+
+.modal-content{
+    margin-top: 10rem;
+}
+
+.modal-content p{
+    margin: 0;
+}
+
+
+#delete {
+    background-color: red;
+    border-color: red;
+}
+
+
+
+
